@@ -1,0 +1,124 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+/* body{
+    background-image: url('./fondo2.jpg');
+    background-size:cover;
+    background-position: center;
+    background-repeat: no-repeat;
+} */
+.navbar{
+    /* background-color:; */
+    max-width: 80%;
+    margin: 0 auto;
+    border-radius: .3rem;
+    margin-top: 5%;
+    position: relative;
+    background-image: url('../img/fondo2.jpg');
+    background-size:cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.ul-navbar{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    line-height: 25px;
+}
+.ul-navbar li{
+    color:whitesmoke;
+    font-weight: bold;
+    font-style: italic normal oblique;
+    font-size: large;
+    text-transform: uppercase;
+}
+.ul-navbar li:hover{
+    cursor: pointer;
+}
+.hr-linea{
+    background-color: azure;
+    width: 50%;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+.hr-linea:hover{
+    cursor: pointer;
+}
+.imagen-logo{
+    background-image: url('./logo.png');
+    width: 70px;
+    height: 60px;
+    border-radius: 50%;
+    position: absolute;
+    
+    background-size:cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.contenedor-card{
+    
+    max-width: 80%;
+    margin: 0 auto;
+    height: 20rem;
+    border-radius: .3rem;
+    margin-top: 10px;
+}
+.card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.imagen{
+    width: 80%;
+    height: 50%;
+    margin-top: 10px;
+    border-radius: .3rem;
+}
+.imagen:hover{
+    cursor: pointer;
+    
+}
+.card h2{
+    margin-top: 5px;
+    border-radius: .3rem;
+    background-color: aliceblue;
+    overflow:hidden;
+}
+.card p{
+    margin-top: 15px;
+    overflow-x: hidden;
+    max-width: 80%;
+}
+.isapre-bg{    
+    padding: 15px 20px;
+    text-transform: uppercase;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.btnVerMas{
+    margin-top: 15px;
+    background-color: darkslateblue;
+    border-radius: .3rem;
+    color: white;
+    padding: 10px 10px;
+    text-transform: uppercase;
+    text-decoration: none;
+    margin-bottom: 15px;
+    transition: .3s ease-out;
+}
+.btnVerMas:hover{
+    cursor: pointer;
+    background-color: rgb(43, 31, 119);;
+    color: cadetblue;
+    transition: .3s ease-out;
+}
+.h2-titulo{
+    font-weight: bold;
+}
+.card-subtitulo{
+    font-weight: bold;
+}

@@ -1,0 +1,36 @@
+<html>
+
+<head>
+
+    {% load static %}        
+     
+    <!-- Styles -->
+    <link href="{% static 'noticias/css/styles.css' %}" rel="stylesheet">
+</head>
+
+<body>   
+    <nav class="navbar">
+        <!-- <div class="imagen-logo">
+
+        </div> -->
+        <ul class="ul-navbar">
+            <li>Inicio</li>
+            <hr class="hr-linea">
+            <li>Noticias</li>
+            <hr class="hr-linea">
+            <li>Contáctanos</li>
+        </ul>
+    </nav>
+<!--Contenido cambiante-->
+{% block content %}
+
+
+{% endblock %}
+
+<!-- Footer -->
+<footer>
+    <!--Text here-->
+</footer>  
+</body>
+
+</html>
