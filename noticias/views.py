@@ -1,11 +1,25 @@
 from django.shortcuts import render
-from django.http import HttpResponse
+from noticias.models import Isapre , Noticia
 
 from . import views
 
 # Create your views here.
-def hello(request):
-    return HttpResponse("<h1>Hello world</h1>")
 
 def noticias(request):
-    return render(request,"noticias/noticias.html")
+
+    noticias = Noticia.objects.all()
+    isapre = Isapre.objects.all()
+
+    return render(request,"noticias/noticias.html",{
+        "noticias":noticias,
+        "isapre":isapre
+    })
+
+def noticia(request , id):
+
+    noticia = Noticia.objects.get(id=id)
+    
+
+    return render(request, "noticia/noticia.html", {
+        "noticia":noticia
+    })

@@ -4,19 +4,20 @@
 
 {% block content %}
     <main>
+        {% for noticia in noticias %}
         <div class="contenedor-card">
             <div class="card">
-                <h2 class="isapre-bg">Consalud</h2>
+                <h2 class="isapre-bg">{{noticia.titulo}}</h2>
                 <img 
-                    src="{% static 'noticias/img/fondo-prueba.jpg' %}"
-                    alt="imagen de la noticia"                    
+                    src="{{noticia.imagen1.url}}"
+                    alt="{{noticia.titulo}}"
                     class="imagen"
                 >
-                <h2 class="h2-titulo">Rebaja en planes</h2>
-                <p class="card-subtitulo">Este es un subtitulo de prueba</p>
-                <p class="card-comentario">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis fugiat et sit minus rerum fuga quibusdam illum tempore voluptas laboriosam temporibus soluta eum libero nisi eos accusamus, quas nostrum distinctio!</p>
-                <a href="#" class="btnVerMas">Ver mas</a>                
+                <h2 class="h2-titulo">{{noticia.sub_titulo}}</h2>                
+                <p class="card-comentario">{{noticia.comentario}}</p>
+                <a href="{% url 'Noticia' noticia.id %}" class="btnVerMas">Ver mas</a>
             </div>
         </div>
+        {% endfor %}
     </main>
 {% endblock %}
