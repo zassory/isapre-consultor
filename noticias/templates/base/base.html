@@ -9,10 +9,7 @@
 </head>
 
 <body>   
-    <nav class="navbar">
-        <!-- <div class="imagen-logo">
-
-        </div> -->
+    <nav class="navbar">                
         <ul class="ul-navbar">
             <li>Inicio</li>
             <hr class="hr-linea">
@@ -20,7 +17,18 @@
             <hr class="hr-linea">
             <li>Contáctanos</li>
         </ul>
+        <img src="{% static 'noticias/img/logo.png' %}" alt="Imagen logo" class="imagen-logo">
     </nav>
+    <div class="nosotros">
+        <h1>Quienes somos ?</h1>
+        <p>Somos un grupo de expertos los cuales nos dedicamos a cotizar planes
+            adecuados para nuestros clientes y mas convenientes a su bolsillo y calidad humana
+        </p>
+        <p>
+            Desde el inicio de la pandemia hasta ahora poseemos una gran cantidad de datos, cuadros comparativos y ofertas
+            de expertos en el rubro
+        </p>
+    </div>
 <!--Contenido cambiante-->
 {% block content %}
 
@@ -29,7 +37,11 @@
 
 <!-- Footer -->
 <footer>
-    <!--Text here-->
+    <h2>Mejora tu plan</h2>
+    <h3>Todos los derechos reservados &copy &reg</h3>
+    <br>
+    <h4>Contáctanos nicolas.programador@gmail.com</h4>
+    <h4>O al +56963530707</h4>
 </footer>  
 </body>
 

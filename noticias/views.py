@@ -7,7 +7,7 @@ from . import views
 
 def noticias(request):
 
-    noticias = Noticia.objects.all()
+    noticias = Noticia.objects.all().order_by('-id')
     isapre = Isapre.objects.all()
 
     return render(request,"noticias/noticias.html",{

@@ -7,17 +7,17 @@
         {% for noticia in noticias %}
         <div class="contenedor-card">
             <div class="card">
-                <h2 class="isapre-bg">{{noticia.titulo}}</h2>
-                <img 
+                <h2 class="isapre-bg t-shadow">{{noticia.titulo}}</h2>
+                <img
                     src="{{noticia.imagen1.url}}"
                     alt="{{noticia.titulo}}"
                     class="imagen"
                 >
-                <h2 class="h2-titulo">{{noticia.sub_titulo}}</h2>                
-                <p class="card-comentario">{{noticia.comentario}}</p>
+                <h3 class="isapre-bg">{{noticia.sub_titulo}}</h3>
                 <a href="{% url 'Noticia' noticia.id %}" class="btnVerMas">Ver mas</a>
             </div>
         </div>
+        <hr style="max-width: 80%; margin: 0 auto;">
         {% endfor %}
     </main>
 {% endblock %}
