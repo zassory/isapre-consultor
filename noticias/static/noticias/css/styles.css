@@ -9,7 +9,7 @@ body{
     background-repeat:repeat;
 }
 
-@media (max-width:470px){
+@media(min-width:342px)and (max-width:576px){
     .navbar{
         /* background-color:; */
         max-width: 100%;
