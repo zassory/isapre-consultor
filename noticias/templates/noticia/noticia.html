@@ -4,10 +4,10 @@
 
 {% block content %}
     <div class="noticia">
-        <h1 class="titulo-noticia">{{noticia.titulo}}</h1>
-        <h2 class="subtitulo-noticia">{{noticia.sub_titulo}}</h2>
-        <img src="{% static noticia.imagen1.url %}" alt="{{noticia.titulo}}" class="imagen">
-        <p class="noticia-comentario">{{noticia.comentario}}</p>
+        <h1 class="titulo-noticia">{{ noticia.titulo }}</h1>
+        <h2 class="subtitulo-noticia">{{ noticia.sub_titulo }}</h2>
+        <img src="{% static noticia.imagen1 %}" alt="{{ noticia.titulo }}" class="imagen">
+        <p class="noticia-comentario">{{ noticia.comentario }}</p>
         <a href="{% url 'Noticias' %}" class="btnVerMas">Volver</a>
     </div>
 {% endblock %}
