@@ -15,8 +15,8 @@ import os
 import dj_database_url
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
-#BASE_DIR = Path(__file__).resolve().parent.parent
-BASE_DIR = os.path.abspath(os.path.join(__file__, '../../../'))
+BASE_DIR = Path(__file__).resolve().parent.parent
+#BASE_DIR = os.path.abspath(os.path.join(__file__, '../../../'))
 
 
 
@@ -27,8 +27,7 @@ BASE_DIR = os.path.abspath(os.path.join(__file__, '../../../'))
 SECRET_KEY = os.environ.get('SECRET_KEY', default='your secret key')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-#DEBUG = 'True'
-DEBUG = 'RENDER' not in os.environ
+DEBUG = True
 
 ALLOWED_HOSTS = []
 
@@ -87,19 +86,19 @@ WSGI_APPLICATION = 'isapre.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': BASE_DIR / 'db.sqlite3',
-#     }
-# }
-
 DATABASES = {
-    'default': dj_database_url.config(
-        default='postgresql://postgres:postgres@localhost:5432/postgres',
-        conn_max_age=600,        
-    )
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
+    }
 }
+
+# DATABASES = {
+#     'default': dj_database_url.config(
+#         default='postgresql://postgres:postgres@localhost:5432/postgres',
+#         conn_max_age=600,        
+#     )
+# }
 
 
 # Password validation
@@ -139,19 +138,17 @@ USE_TZ = True
 
 if not DEBUG:
 
-    STATIC_ROOT = os.path.join(BASE_DIR, 'static')
-    #STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+    STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
     #STATIC_ROOT = os.path.join(BASE_DIR, '/media/')
     #os.path.join(BASE_DIR, '/media/')
 
     STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
-    
 
 STATIC_URL = '/static/'
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'static')
+    os.path.join(BASE_DIR, 'noticias/static')
 ]
 
 
