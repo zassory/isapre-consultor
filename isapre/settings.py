@@ -139,9 +139,10 @@ USE_TZ = True
 
 
 if not DEBUG:
-    print("Entra en not DEBUG")
     STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+    print("static_root: "+STATIC_ROOT)
     STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+    print("staticfiles_storage: "+ STATICFILES_STORAGE)
 
 STATIC_URL = '/static/noticias/'
 MEDIA_URL = '/media/'
