@@ -27,8 +27,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.environ.get('SECRET_KEY', default='your secret key')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
-#DEBUG = 'RENDER' not in os.environ
+#DEBUG = True
+DEBUG = 'RENDER' not in os.environ
+print(DEBUG);
 
 ALLOWED_HOSTS = []
 
@@ -137,16 +138,13 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
 
 
-#if not DEBUG:
-
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-    #STATIC_ROOT = os.path.join(BASE_DIR, '/media/')
-    #os.path.join(BASE_DIR, '/media/')
-
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+if not DEBUG:
+    print("Entra en not DEBUG")
+    STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+    STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 STATIC_URL = '/static/noticias/'
-MEDIA_URL = 'media/'
+MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'noticias/static')
